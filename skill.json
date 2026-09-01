@@ -1,0 +1,41 @@
+{
+  "name": "genpark-multivariate-ad-creative-fatigue-auditor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multivariate ad creative fatigue auditor tracking CTR decay slopes, impression frequency caps, and automated creative refresh triggers.",
+  "author": "genpark",
+  "category": "ad-optimization",
+  "tags": [
+    "ad-fatigue",
+    "creative-optimization",
+    "ctr-decay",
+    "multivariate-testing",
+    "ad-refresh"
+  ],
+  "inputs": {
+    "ad_account_id": {
+      "type": "string"
+    },
+    "active_ad_variants_count": {
+      "type": "integer"
+    },
+    "lookback_window_days": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "audit_run_id": {
+      "type": "string"
+    },
+    "ctr_decay_rate_pct_per_day": {
+      "type": "number"
+    },
+    "recommended_refresh_variants_count": {
+      "type": "integer"
+    },
+    "fatigue_heatmap_report_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
